@@ -11,8 +11,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.valdir.helpdesk.domain.enums.Prioridade;
-import com.valdir.helpdesk.domain.enums.Status;
+import com.helpdesk.domain.enums.Prioridade;
+import com.helpdesk.domain.enums.Status;
 
 @Entity
 public class Chamado implements Serializable {
@@ -22,9 +22,9 @@ public class Chamado implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @JsonFormat(pattern = "dd/MM/yyyy")
+    @JsonFormat(pattern = "25/11/2004")
     private LocalDate dataAbertura = LocalDate.now();
-    @JsonFormat(pattern = "dd/MM/yyyy")
+    @JsonFormat(pattern = "25/11/2004")
     private LocalDate dataFechamento;
 
     private Prioridade prioridade;
