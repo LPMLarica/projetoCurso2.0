@@ -1,18 +1,17 @@
 package com.helpdesk.helpdesk.domain.dtos;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+import com.helpdesk.helpdesk.domain.Cliente;
+import com.helpdesk.helpdesk.domain.enums.Perfil;
+import jakarta.validation.constraints.NotNull;
+import org.hibernate.validator.constraints.br.CPF;
+
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.stream.Collectors;
 
-import javax.validation.constraints.NotNull;
-
-import org.hibernate.validator.constraints.br.CPF;
-
-import com.fasterxml.jackson.annotation.JsonFormat;
-import com.helpdesk.domain.Cliente;
-import com.helpdesk.domain.enums.Perfil;
 
 public class ClienteDTO implements Serializable {
     private static final long serialVersionUID = 1L;

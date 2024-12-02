@@ -1,16 +1,14 @@
 package com.helpdesk.helpdesk.domain;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
+import com.helpdesk.helpdesk.domain.enums.Prioridade;
+import com.helpdesk.helpdesk.domain.enums.Status;
+import jakarta.persistence.*;
+
+
 import java.io.Serializable;
 import java.time.LocalDate;
-
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import com.helpdesk.domain.enums.Prioridade;
-import com.helpdesk.domain.enums.Status;
 
 @Entity
 public class Chamado implements Serializable {
