@@ -9,10 +9,12 @@ import java.util.stream.Collectors;
 
 import com.helpdesk.helpdesk.domain.Tecnico;
 import com.helpdesk.helpdesk.domain.enums.Perfil;
-import jakarta.validation.constraints.NotNull;
+
 import org.hibernate.validator.constraints.br.CPF;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+
+import javax.validation.constraints.NotNull;
 
 
 public class TecnicoDTO implements Serializable {

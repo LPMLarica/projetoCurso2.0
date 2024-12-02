@@ -2,8 +2,9 @@ package com.helpdesk.helpdesk.domain;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.helpdesk.helpdesk.domain.enums.Perfil;
-import jakarta.persistence.*;
 
+
+import javax.persistence.*;
 import java.io.Serializable;
 import java.time.LocalDate;
 import java.util.HashSet;

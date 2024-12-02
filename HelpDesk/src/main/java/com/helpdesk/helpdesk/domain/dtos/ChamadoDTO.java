@@ -7,8 +7,8 @@ import java.time.LocalDate;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.helpdesk.helpdesk.domain.Chamado;
-import jakarta.validation.constraints.NotNull;
-;
+
+;import javax.validation.constraints.NotNull;
 
 public class ChamadoDTO implements Serializable {
     private static final long serialVersionUID = 1L;
