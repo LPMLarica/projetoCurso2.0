@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 
-import com.helpdesk.services.DBService;
+import com.helpdesk.helpdesk.services.DBService;
 
 @Configuration
 @Profile("dev")

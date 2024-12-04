@@ -17,9 +17,9 @@ import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
 
-import com.helpdesk.security.JWTAuthenticationFilter;
-import com.helpdesk.security.JWTAuthorizationFilter;
-import com.helpdesk.security.JWTUtil;
+import com.helpdesk.helpdesk.security.JWTAuthenticationFilter;
+import com.helpdesk.helpdesk.security.JWTAuthorizationFilter;
+import com.helpdesk.helpdesk.security.JWTUtil;
 
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled = true)
