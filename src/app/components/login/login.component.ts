@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
-import { Credenciais } from '../../../../../helpdesk-front-master/src/app/models/credenciais';
-import { AuthService } from '../../../../../helpdesk-front-master/src/app/services/auth.service';
+import { Credenciais } from '../../../../../HelpDesk/src/app/models/credenciais';
+import { AuthService } from '../../../../../HelpDesk/src/app/services/auth.service';
 
 @Component({
   selector: 'app-login',
