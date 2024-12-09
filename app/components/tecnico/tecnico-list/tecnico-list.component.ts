@@ -1,8 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatTableDataSource } from '@angular/material/table';
-import { Tecnico } from '../../../../../../helpdesk-front-master/src/app/models/tecnico';
-import { TecnicoService } from '../../../../../../helpdesk-front-master/src/app/services/tecnico.service';
+import { Tecnico } from '../../../../../../HelpDesk/src/app/models/tecnico';
+import { TecnicoService } from '../../../../../../HelpDesk/src/app/services/tecnico.service';
 
 @Component({
   selector: 'app-tecnico-list',

@@ -34,8 +34,6 @@ import { HeaderComponent } from './components/header/header.component';
 import { TecnicoListComponent } from './components/tecnico/tecnico-list/tecnico-list.component';
 import { LoginComponent } from './components/login/login.component';
 import { ToastrModule } from 'ngx-toastr';
-// @ts-ignore
-import { AuthInterceptorProvider } from 'Help./interceptors/auth.interceptor';
 import { TecnicoCreateComponent } from './components/tecnico/tecnico-create/tecnico-create.component';
 import { NgxMaskModule } from 'ngx-mask';
 import { TecnicoUpdateComponent } from './components/tecnico/tecnico-update/tecnico-update.component';
@@ -48,6 +46,7 @@ import { ChamadoListComponent } from './components/chamado/chamado-list/chamado-
 import { ChamadoCreateComponent } from './components/chamado/chamado-create/chamado-create.component';
 import { ChamadoUpdateComponent } from './components/chamado/chamado-update/chamado-update.component';
 import { ChamadoReadComponent } from './components/chamado/chamado-read/chamado-read.component';
+import {AuthInterceptorProvider} from "../interceptors/auth.interceptors";
 
 @NgModule({
     declarations: [
@@ -99,8 +98,13 @@ import { ChamadoReadComponent } from './components/chamado/chamado-read/chamado-
             progressBar: true
         }),
         NgxMaskModule.forRoot()
-    ],
-    providers: [AuthInterceptorProvider],
+    ]
+    ,
+    providers: [
+    AuthInterceptorProvider,
+    // Outros serviços
+],
+
     bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -3,7 +3,7 @@ import { FormControl, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
 import { Tecnico } from '../../../models/tecnico';
-import { TecnicoService } from '../../../../../../helpdesk-front-master/src/app/services/tecnico.service';
+import { TecnicoService } from '../../../../../../HelpDesk/src/app/services/tecnico.service';
 
 
 @Component({
