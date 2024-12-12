@@ -1,0 +1,11 @@
+<div class="validation-container">
+    <h2>Validador de CPF e CNPJ</h2>
+    <input
+            type="text"
+            [(ngModel)]="input"
+            placeholder="Digite o CPF ou CNPJ"
+            maxlength="18"
+    />
+    <button (click)="validate()">Validar</button>
+    <p>{{ message }}</p>
+</div>

@@ -1,0 +1,11 @@
+<div class="verificador-nome-container">
+    <h2>Verificador de Nome</h2>
+    <input
+            type="text"
+            [(ngModel)]="nome"
+            placeholder="Digite um nome"
+            required
+    />
+    <button (click)="verificarNome()">Verificar</button>
+    <p>{{ mensagem }}</p>
+</div>

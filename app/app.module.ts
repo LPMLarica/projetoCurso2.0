@@ -28,25 +28,28 @@ import { MatListModule } from '@angular/material/list';
 import { MatCardModule } from '@angular/material/card';
 
 
-import { NavComponent } from './components/nav/nav.component';
-import { HomeComponent } from './components/home/home.component';
-import { HeaderComponent } from './components/header/header.component';
-import { TecnicoListComponent } from './components/tecnico/tecnico-list/tecnico-list.component';
-import { LoginComponent } from './components/login/login.component';
+import { NavComponent } from './component/nav/nav.component';
+import { HomeComponent } from './component/home/home.component';
+import { HeaderComponent } from './component/header/header.component';
+import { TecnicoListComponent } from './component/tecnico/tecnico-list/tecnico-list.component';
+import { LoginComponent } from './component/login/login.component';
 import { ToastrModule } from 'ngx-toastr';
-import { TecnicoCreateComponent } from './components/tecnico/tecnico-create/tecnico-create.component';
+import { TecnicoCreateComponent } from './component/tecnico/tecnico-create/tecnico-create.component';
 import { NgxMaskModule } from 'ngx-mask';
-import { TecnicoUpdateComponent } from './components/tecnico/tecnico-update/tecnico-update.component';
-import { TecnicoDeleteComponent } from './components/tecnico/tecnico-delete/tecnico-delete.component';
-import { ClienteCreateComponent } from '../../../HelpDesk/src/app/components/cliente/cliente-create/cliente-create.component';
-import { ClienteDeleteComponent } from '../../../HelpDesk/src/app/components/cliente/cliente-delete/cliente-delete.component';
-import { ClienteListComponent } from '../../../HelpDesk/src/app/components/cliente/cliente-list/cliente-list.component';
-import { ClienteUpdateComponent } from '../../../HelpDesk/src/app/components/cliente/cliente-update/cliente-update.component';
-import { ChamadoListComponent } from './components/chamado/chamado-list/chamado-list.component';
-import { ChamadoCreateComponent } from './components/chamado/chamado-create/chamado-create.component';
-import { ChamadoUpdateComponent } from './components/chamado/chamado-update/chamado-update.component';
-import { ChamadoReadComponent } from './components/chamado/chamado-read/chamado-read.component';
+import { TecnicoUpdateComponent } from './component/tecnico/tecnico-update/tecnico-update.component';
+import { TecnicoDeleteComponent } from './component/tecnico/tecnico-delete/tecnico-delete.component';
+import { ClienteCreateComponent } from './component/cliente/cliente-create/cliente-create.component';
+import { ClienteDeleteComponent } from './component/cliente/cliente-delete/cliente-delete.component';
+import { ClienteListComponent } from './component/cliente/cliente-list/cliente-list.component';
+import { ClienteUpdateComponent } from './component/cliente/cliente-update/cliente-update.component';
+import { ChamadoListComponent } from './component/chamado/chamado-list/chamado-list.component';
+import { ChamadoCreateComponent } from './component/chamado/chamado-create/chamado-create.component';
+import { ChamadoUpdateComponent } from './component/chamado/chamado-update/chamado-update.component';
+import { ChamadoReadComponent } from './component/chamado/chamado-read/chamado-read.component';
 import {AuthInterceptorProvider} from "../interceptors/auth.interceptors";
+import { CpfCnpjComponent} from './component/cpf-cnpj/cpf-cnpj.component';
+import {EmailComponent} from "./component/email/email.component";
+import {VerificadorNomeComponent} from "./component/verificador-nome/verificador-nome.component";
 
 @NgModule({
     declarations: [
@@ -66,7 +69,10 @@ import {AuthInterceptorProvider} from "../interceptors/auth.interceptors";
         ChamadoListComponent,
         ChamadoCreateComponent,
         ChamadoUpdateComponent,
-        ChamadoReadComponent
+        ChamadoReadComponent,
+        CpfCnpjComponent,
+        EmailComponent,
+        VerificadorNomeComponent
     ],
     imports: [
         BrowserModule,
