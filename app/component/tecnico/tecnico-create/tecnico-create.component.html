@@ -10,48 +10,19 @@
          <mat-checkbox (click)="addPerfil(2)" class="margin" color="primary">Tecnico</mat-checkbox>
        </section>
 
-       <mat-form-field class="fullWidth" appearance="legacy">
-           <app-verificador-nome>
 
-           </app-verificador-nome>
-         <mat-label>Nome</mat-label>
-         <input 
-         [(ngModel)]="tecnico.nome"
-         name="nome"
-         [formControl]="nome"
-         required
-         matInput 
-         placeholder="Ex.. fulano de tal"
-         maxlength="50">
-         <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-       </mat-form-field>
-       
-       <mat-form-field class="fullWidth" appearance="legacy">
-           <app-cpf-cnpj></app-cpf-cnpj>
-         <mat-label>CPF ou CNPJ</mat-label>
-         <input 
-         [(ngModel)]="tecnico.cpf"
-         name="cpf"
-         [formControl]="cpf"
-         required
-         matInput 
-         placeholder="Ex..000.000.000-00"
-         mask="000.000.000-00">
-         <mat-icon matSuffix>pin </mat-icon>
-       </mat-form-field>
+       <app-verificador-nome [value]="tecnico.nome">
 
-       <mat-form-field class="fullWidth" appearance="legacy">
-           <app-email></app-email>
-         <mat-label>E-mail</mat-label>
-         <input 
-         [(ngModel)]="tecnico.email"
-         name="email"
-         [formControl]="email"
-         required
-         matInput 
-         placeholder="Ex.. fulano@mail.com">
-         <mat-icon matSuffix>email</mat-icon>
-       </mat-form-field>
+
+       </app-verificador-nome>
+
+       <app-cpf-cnpj [value]="tecnico.cpfcnpj">
+
+       </app-cpf-cnpj>
+
+       <app-email [value]="tecnico.email">
+
+       </app-email>
 
        <mat-form-field class="fullWidth" appearance="legacy">
          <mat-label>Senha</mat-label>

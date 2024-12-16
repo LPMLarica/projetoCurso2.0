@@ -16,7 +16,7 @@ export class TecnicoUpdateComponent implements OnInit {
   tecnico: Tecnico = {
     id:         '',
     nome:       '',
-    cpf:        '',
+    cpfcnpj:        '',
     email:      '',
     senha:      '',
     perfis:     [],

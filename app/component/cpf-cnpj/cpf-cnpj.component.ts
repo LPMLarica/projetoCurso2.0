@@ -1,16 +1,30 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { FormControl, Validators } from "@angular/forms";
 
 @Component({
   selector: 'app-cpf-cnpj',
   templateUrl: './cpf-cnpj.component.html',
   styleUrls: ['./cpf-cnpj.component.css']
 })
-export class CpfCnpjComponent {
-  input: string = '';
+export class cpfcnpjComponent {
+  @Input()
+  value: string = '';
   message: string = '';
 
+
+  cpfcnpj: FormControl = new FormControl(this.value, [Validators.required]);
+  @Output()
+  valueChange: EventEmitter<string> = new EventEmitter<string>();
+
+
+  onInputChange() {
+    this.value = this.cpfcnpj.value;
+    this.valueChange.emit(this.value);
+    this.validate();
+  }
+
   validate() {
-    const cleanedInput = this.input.replace(/\D/g, '');
+    const cleanedInput = this.value.replace(/\D/g, '');
 
     if (cleanedInput.length === 11) {
       this.message = this.isValidCPF(cleanedInput) ? 'CPF válido!' : 'CPF inválido!';

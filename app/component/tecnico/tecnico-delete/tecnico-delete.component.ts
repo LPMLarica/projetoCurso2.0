@@ -15,7 +15,7 @@ export class TecnicoDeleteComponent implements OnInit {
   tecnico: Tecnico = {
     id:         '',
     nome:       '',
-    cpf:        '',
+    cpfcnpj:        '',
     email:      '',
     senha:      '',
     perfis:     [],

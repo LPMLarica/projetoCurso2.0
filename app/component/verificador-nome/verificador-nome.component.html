@@ -1,3 +1,15 @@
-<div class="verificador-nome-container">
-</div>
+<mat-form-field class="fullWidth" appearance="legacy">
 
+    <mat-label>Nome</mat-label>
+    <input
+            [(ngModel)]="value"
+            name="nome"
+            [formControl]="nome"
+            (input)="onInputChange()"
+            (input)="ngonInit()"
+            required
+            matInput
+            placeholder="Ex.. fulano de tal"
+            maxlength="50">
+    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+</mat-form-field>

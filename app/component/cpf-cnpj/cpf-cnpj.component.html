@@ -1,2 +1,13 @@
-<div class="validation-container">
-</div>
+<mat-form-field class="fullWidth" appearance="legacy">
+    <mat-label>CPF ou CNPJ</mat-label>
+    <input
+            [(ngModel)]="value"
+            name="cpf"
+            [formControl]="cpfcnpj"
+            (input)="onInputChange()"
+            required
+            matInput
+            placeholder="Ex..000.000.000-00"
+            mask="000.000.000-00">
+    <mat-icon matSuffix>pin </mat-icon>
+</mat-form-field>

@@ -47,7 +47,7 @@ import { ChamadoCreateComponent } from './component/chamado/chamado-create/chama
 import { ChamadoUpdateComponent } from './component/chamado/chamado-update/chamado-update.component';
 import { ChamadoReadComponent } from './component/chamado/chamado-read/chamado-read.component';
 import {AuthInterceptorProvider} from "../interceptors/auth.interceptors";
-import { CpfCnpjComponent} from './component/cpf-cnpj/cpf-cnpj.component';
+import { cpfcnpjComponent} from './component/cpf-cnpj/cpf-cnpj.component';
 import {EmailComponent} from "./component/email/email.component";
 import {VerificadorNomeComponent} from "./component/verificador-nome/verificador-nome.component";
 
@@ -70,7 +70,7 @@ import {VerificadorNomeComponent} from "./component/verificador-nome/verificador
         ChamadoCreateComponent,
         ChamadoUpdateComponent,
         ChamadoReadComponent,
-        CpfCnpjComponent,
+        cpfcnpjComponent,
         EmailComponent,
         VerificadorNomeComponent
     ],
