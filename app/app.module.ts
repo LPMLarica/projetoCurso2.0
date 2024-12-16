@@ -108,7 +108,6 @@ import {VerificadorNomeComponent} from "./component/verificador-nome/verificador
     ,
     providers: [
     AuthInterceptorProvider,
-    // Outros serviços
 ],
 
     bootstrap: [AppComponent]

@@ -11,6 +11,9 @@
        </section>
 
        <mat-form-field class="fullWidth" appearance="legacy">
+           <app-verificador-nome>
+
+           </app-verificador-nome>
          <mat-label>Nome</mat-label>
          <input 
          [(ngModel)]="tecnico.nome"
@@ -24,7 +27,8 @@
        </mat-form-field>
        
        <mat-form-field class="fullWidth" appearance="legacy">
-         <mat-label>CPF</mat-label>
+           <app-cpf-cnpj></app-cpf-cnpj>
+         <mat-label>CPF ou CNPJ</mat-label>
          <input 
          [(ngModel)]="tecnico.cpf"
          name="cpf"
@@ -37,6 +41,7 @@
        </mat-form-field>
 
        <mat-form-field class="fullWidth" appearance="legacy">
+           <app-email></app-email>
          <mat-label>E-mail</mat-label>
          <input 
          [(ngModel)]="tecnico.email"
