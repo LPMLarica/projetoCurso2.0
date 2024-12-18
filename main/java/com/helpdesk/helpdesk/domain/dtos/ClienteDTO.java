@@ -22,7 +22,7 @@ public class ClienteDTO implements Serializable {
     protected String nome;
     @NotNull(message = "O campo CPF é requerido")
     @CPF
-    protected String cpf;
+    protected String cpfcnpj;
     @NotNull(message = "O campo EMAIL é requerido")
     protected String email;
     @NotNull(message = "O campo SENHA é requerido")
@@ -41,7 +41,7 @@ public class ClienteDTO implements Serializable {
         super();
         this.id = obj.getId();
         this.nome = obj.getNome();
-        this.cpf = obj.getCpf();
+        this.cpfcnpj = obj.getCpfcnpj();
         this.email = obj.getEmail();
         this.senha = obj.getSenha();
         this.perfis = obj.getPerfis().stream().map(x -> x.getCodigo()).collect(Collectors.toSet());
@@ -65,12 +65,12 @@ public class ClienteDTO implements Serializable {
         this.nome = nome;
     }
 
-    public String getCpf() {
-        return cpf;
+    public String getCpfcnpj() {
+        return cpfcnpj;
     }
 
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
+    public void setCpfcnpj(String cpfcnpj) {
+        this.cpfcnpj = cpfcnpj;
     }
 
     public String getEmail() {
@@ -104,5 +104,6 @@ public class ClienteDTO implements Serializable {
     public void setDataCriacao(LocalDate dataCriacao) {
         this.dataCriacao = dataCriacao;
     }
+
 
 }

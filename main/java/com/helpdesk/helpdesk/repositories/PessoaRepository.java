@@ -8,7 +8,7 @@ import com.helpdesk.helpdesk.domain.Pessoa;
 
 public interface PessoaRepository extends JpaRepository<Pessoa, Integer> {
 
-    Optional<Pessoa> findByCpf(String cpf);
+    Optional<Pessoa> findByCpfcnpj(String cpfcnpj);
     Optional<Pessoa> findByEmail(String email);
 
 }

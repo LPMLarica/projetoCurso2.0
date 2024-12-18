@@ -67,7 +67,7 @@ public class ClienteService {
     }
 
     private void validaPorCpfEEmail(ClienteDTO objDTO) {
-        Optional<Pessoa> obj = pessoaRepository.findByCpf(objDTO.getCpf());
+        Optional<Pessoa> obj = pessoaRepository.findByCpfcnpj(objDTO.getCpfcnpj());
         if (obj.isPresent() && obj.get().getId() != objDTO.getId()) {
             throw new DataIntegrityViolationException("CPF já cadastrado no sistema!");
         }

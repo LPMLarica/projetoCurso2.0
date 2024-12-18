@@ -22,7 +22,7 @@ public abstract class Pessoa implements Serializable {
     protected String nome;
 
     @Column(unique = true)
-    protected String cpf;
+    protected String cpfcnpj;
 
     @Column(unique = true)
     protected String email;
@@ -44,7 +44,7 @@ public abstract class Pessoa implements Serializable {
         super();
         this.id = id;
         this.nome = nome;
-        this.cpf = cpf;
+        this.cpfcnpj = cpfcnpj;
         this.email = email;
         this.senha = senha;
         addPerfil(Perfil.CLIENTE);
@@ -66,12 +66,12 @@ public abstract class Pessoa implements Serializable {
         this.nome = nome;
     }
 
-    public String getCpf() {
-        return cpf;
+    public String getCpfcnpj() {
+        return cpfcnpj;
     }
 
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
+    public void setCpfcnpj(String cpf) {
+        this.cpfcnpj = cpfcnpj;
     }
 
     public String getEmail() {
@@ -110,7 +110,7 @@ public abstract class Pessoa implements Serializable {
     public int hashCode() {
         final int prime = 31;
         int result = 1;
-        result = prime * result + ((cpf == null) ? 0 : cpf.hashCode());
+        result = prime * result + ((cpfcnpj == null) ? 0 : cpfcnpj.hashCode());
         result = prime * result + ((id == null) ? 0 : id.hashCode());
         return result;
     }
@@ -124,10 +124,10 @@ public abstract class Pessoa implements Serializable {
         if (getClass() != obj.getClass())
             return false;
         Pessoa other = (Pessoa) obj;
-        if (cpf == null) {
-            if (other.cpf != null)
+        if (cpfcnpj == null) {
+            if (other.cpfcnpj != null)
                 return false;
-        } else if (!cpf.equals(other.cpf))
+        } else if (!cpfcnpj.equals(other.cpfcnpj))
             return false;
         if (id == null) {
             if (other.id != null)

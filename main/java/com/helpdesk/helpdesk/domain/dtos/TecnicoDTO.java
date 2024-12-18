@@ -10,8 +10,6 @@ import java.util.stream.Collectors;
 import com.helpdesk.helpdesk.domain.Tecnico;
 import com.helpdesk.helpdesk.domain.enums.Perfil;
 
-import org.hibernate.validator.constraints.br.CPF;
-
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 import javax.validation.constraints.NotNull;
@@ -24,8 +22,7 @@ public class TecnicoDTO implements Serializable {
     @NotNull(message = "O campo NOME é requerido")
     protected String nome;
     @NotNull(message = "O campo CPF é requerido")
-    @CPF
-    protected String cpf;
+    protected String cpfcnpj;
     @NotNull(message = "O campo EMAIL é requerido")
     protected String email;
     @NotNull(message = "O campo SENHA é requerido")
@@ -44,7 +41,7 @@ public class TecnicoDTO implements Serializable {
         super();
         this.id = obj.getId();
         this.nome = obj.getNome();
-        this.cpf = obj.getCpf();
+        this.cpfcnpj = obj.getCpfcnpj();
         this.email = obj.getEmail();
         this.senha = obj.getSenha();
         this.perfis = obj.getPerfis().stream().map(x -> x.getCodigo()).collect(Collectors.toSet());
@@ -68,12 +65,12 @@ public class TecnicoDTO implements Serializable {
         this.nome = nome;
     }
 
-    public String getCpf() {
-        return cpf;
+    public String getCpfCnpj() {
+        return cpfcnpj;
     }
 
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
+    public void setCpfcnpj(String cpf) {
+        this.cpfcnpj = cpfcnpj;
     }
 
     public String getEmail() {
