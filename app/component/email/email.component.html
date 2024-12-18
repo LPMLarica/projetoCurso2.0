@@ -1,7 +1,8 @@
 <mat-form-field class="fullWidth" appearance="legacy">
     <mat-label>E-mail</mat-label>
     <input
-            [(ngModel)]="value"
+            [ngModel]="value"
+            (ngModelChange)="setValue($event)"
             name="email"
             [formControl]="email"
             (input)="sendEmail()"

@@ -11,16 +11,16 @@
        </section>
 
 
-       <app-verificador-nome [value]="tecnico.nome">
+       <app-verificador-nome [(value)]="tecnico.nome" required >
 
 
        </app-verificador-nome>
 
-       <app-cpf-cnpj [value]="tecnico.cpfcnpj">
+       <app-cpf-cnpj [(value)]="tecnico.cpfcnpj" required>
 
        </app-cpf-cnpj>
 
-       <app-email [value]="tecnico.email">
+       <app-email [(value)]="tecnico.email" required>
 
        </app-email>
 

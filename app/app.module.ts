@@ -47,9 +47,12 @@ import { ChamadoCreateComponent } from './component/chamado/chamado-create/chama
 import { ChamadoUpdateComponent } from './component/chamado/chamado-update/chamado-update.component';
 import { ChamadoReadComponent } from './component/chamado/chamado-read/chamado-read.component';
 import {AuthInterceptorProvider} from "../interceptors/auth.interceptors";
-import { cpfcnpjComponent} from './component/cpf-cnpj/cpf-cnpj.component';
+import { CpfCnpjComponent} from './component/cpf-cnpj/cpf-cnpj.component';
 import {EmailComponent} from "./component/email/email.component";
 import {VerificadorNomeComponent} from "./component/verificador-nome/verificador-nome.component";
+import {ProdutoComponent} from "./component/produto/produto.component";
+import {ProdutoService} from "./services/produto.service";
+import {RouterModule} from "@angular/router";
 
 @NgModule({
     declarations: [
@@ -70,9 +73,10 @@ import {VerificadorNomeComponent} from "./component/verificador-nome/verificador
         ChamadoCreateComponent,
         ChamadoUpdateComponent,
         ChamadoReadComponent,
-        cpfcnpjComponent,
+        CpfCnpjComponent,
         EmailComponent,
-        VerificadorNomeComponent
+        VerificadorNomeComponent,
+        ProdutoComponent,
     ],
     imports: [
         BrowserModule,
@@ -103,10 +107,14 @@ import {VerificadorNomeComponent} from "./component/verificador-nome/verificador
             closeButton: true,
             progressBar: true
         }),
-        NgxMaskModule.forRoot()
+        NgxMaskModule.forRoot(),
+        RouterModule.forRoot([
+            { path: '', redirectTo: '/', pathMatch: 'full' },
+            { path: 'produtos', component: ProdutoComponent },
+        ])
     ]
     ,
-    providers: [
+    providers: [ ProdutoService,
     AuthInterceptorProvider,
 ],
 

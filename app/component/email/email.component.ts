@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
-import { FormControl, Validators } from "@angular/forms";
+import {FormControl, ValidatorFn, Validators} from "@angular/forms";
 
 @Component({
     selector: 'app-email',
@@ -7,6 +7,7 @@ import { FormControl, Validators } from "@angular/forms";
     styleUrls: ['./email.component.css']
 })
 export class EmailComponent {
+
     @Input()
     value: string = '';
     email: FormControl = new FormControl(this.value, [
@@ -21,9 +22,16 @@ export class EmailComponent {
     sendEmail() {
         if (this.email.valid) {
             console.log(`Email enviado para: ${this.email.value}`);
-            this.valueChange.emit(this.email.value);
         } else {
             console.error("Endereço de email inválido.");
+        }
+    }
+
+    setValue(event) {
+        if (event && event != this.value){
+            this.value = event
+            this.valueChange.emit(this.value)
+
         }
     }
 }

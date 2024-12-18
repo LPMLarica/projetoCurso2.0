@@ -22,9 +22,6 @@ export class TecnicoCreateComponent implements OnInit {
     dataCriacao: ''
   }
 
-  nome: FormControl =  new FormControl(null, Validators.minLength(3));
-  cpf: FormControl =       new FormControl(null, Validators.required);
-  email: FormControl =        new FormControl(null, Validators.email);
   senha: FormControl = new FormControl(null, Validators.minLength(3));
 
   constructor(
@@ -33,9 +30,15 @@ export class TecnicoCreateComponent implements OnInit {
     private router:          Router,
     ) { }
 
-  ngOnInit(): void { }
+  ngOnInit(): void { [this.addPerfil(1)]}
 
   create(): void {
+    if (this.tecnico && this.tecnico.cpfcnpj && this.tecnico.nome && this.tecnico.email) {
+      // this.tecnico= this.tecnicoDTO
+    }
+
+
+
     this.service.create(this.tecnico).subscribe(() => {
       this.toast.success('Técnico cadastrado com sucesso', 'Cadastro');
       this.router.navigate(['tecnicos'])
@@ -60,7 +63,6 @@ export class TecnicoCreateComponent implements OnInit {
   }
   
   validaCampos(): boolean {
-    return this.nome.valid && this.cpf.valid
-     && this.email.valid && this.senha.valid
+    return this.senha.valid
   }
 }

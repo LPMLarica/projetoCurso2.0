@@ -7,7 +7,6 @@
         <section class="section">
             <mat-checkbox (click)="addPerfil(0)" class="margin" color="primary">Admin</mat-checkbox>
             <mat-checkbox (click)="addPerfil(1)" [checked]="true" class="margin" color="primary">Cliente</mat-checkbox>
-            <mat-checkbox (click)="addPerfil(2)" class="margin" color="primary">Cliente</mat-checkbox>
         </section>
 
         <mat-form-field class="fullWidth" appearance="legacy">
@@ -26,9 +25,9 @@
         <mat-form-field class="fullWidth" appearance="legacy">
             <mat-label>CPF</mat-label>
             <input
-                    [(ngModel)]="cliente.cpf"
-                    name="cpf"
-                    [formControl]="cpf"
+                    [(ngModel)]="cliente.cpfcnpj"
+                    name="cpfcnpj"
+                    [formControl]="cpfcnpj"
                     required
                     matInput
                     placeholder="Ex..000.000.000-00"
