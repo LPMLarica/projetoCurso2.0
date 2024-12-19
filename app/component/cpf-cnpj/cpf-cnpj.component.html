@@ -3,9 +3,9 @@
     <input
             [ngModel]="value"
             [formControl]="cpfcnpj"
-            (ngModelChange)="cpfcnpjvalidate($event)"
+            (ngModelChange)="setValue($event)"
             required
-            name="value"
+            name="cpfcnpj"
             matInput
             placeholder="Ex.. 000.000.000-00"
             mask="000.000.000-00">

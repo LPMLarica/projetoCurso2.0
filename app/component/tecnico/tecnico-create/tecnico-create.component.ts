@@ -15,7 +15,7 @@ export class TecnicoCreateComponent implements OnInit {
   tecnico: Tecnico = {
     id:         '',
     nome:       '',
-    cpfcnpj:        '',
+    cpfcnpj:    '',
     email:      '',
     senha:      '',
     perfis:     [],
@@ -33,9 +33,9 @@ export class TecnicoCreateComponent implements OnInit {
   ngOnInit(): void { [this.addPerfil(1)]}
 
   create(): void {
-    if (this.tecnico && this.tecnico.cpfcnpj && this.tecnico.nome && this.tecnico.email) {
+    //if (this.tecnico && this.tecnico.cpfcnpj && this.tecnico.nome && this.tecnico.email) {
       // this.tecnico= this.tecnicoDTO
-    }
+    //}
 
 
 

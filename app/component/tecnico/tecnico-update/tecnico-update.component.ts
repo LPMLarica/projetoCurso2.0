@@ -24,7 +24,7 @@ export class TecnicoUpdateComponent implements OnInit {
   }
 
   nome: FormControl =  new FormControl(null, Validators.minLength(3));
-  cpf: FormControl =       new FormControl(null, Validators.required);
+  cpfcnpj: FormControl =       new FormControl(null, Validators.required);
   email: FormControl =        new FormControl(null, Validators.email);
   senha: FormControl = new FormControl(null, Validators.minLength(3));
 
@@ -72,7 +72,7 @@ export class TecnicoUpdateComponent implements OnInit {
   }
   
   validaCampos(): boolean {
-    return this.nome.valid && this.cpf.valid
+    return this.nome.valid && this.cpfcnpj.valid
      && this.email.valid && this.senha.valid
   }
 }
