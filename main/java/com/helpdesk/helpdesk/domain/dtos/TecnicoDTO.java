@@ -21,7 +21,7 @@ public class TecnicoDTO implements Serializable {
     protected Integer id;
     @NotNull(message = "O campo NOME é requerido")
     protected String nome;
-    @NotNull(message = "O campo CPF é requerido")
+    @NotNull(message = "O campo CPF ou CNPJ é requerido")
     protected String cpfcnpj;
     @NotNull(message = "O campo EMAIL é requerido")
     protected String email;
@@ -69,7 +69,7 @@ public class TecnicoDTO implements Serializable {
         return cpfcnpj;
     }
 
-    public void setCpfcnpj(String cpf) {
+    public void setCpfcnpj(String cpfcnpj) {
         this.cpfcnpj = cpfcnpj;
     }
 
