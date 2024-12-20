@@ -19,6 +19,7 @@ import { TecnicoUpdateComponent } from './component/tecnico/tecnico-update/tecni
 import {PedidosListComponent} from "./component/pedidos/pedidos-list/pedidos-list.component";
 import {PedidosFormComponent} from "./component/pedidos/pedidos-form/pedidos-form.component";
 import {ProdutoComponent} from "./component/produto/produto.component";
+import {ProdutoListaComponent,} from "./component/produto/produto-list/produto-list.component";
 
 const routes: Routes = [
     { path: 'login', component: LoginComponent },
@@ -45,7 +46,8 @@ const routes: Routes = [
             {path: 'pedidos/novo', component: PedidosFormComponent},
             { path: ``, redirectTo: '/pedidos', pathMatch: 'full'},
 
-            {path: 'produto', component: ProdutoComponent}
+            {path: 'produto', component: ProdutoComponent},
+            {path: 'produto/lista', component: ProdutoListaComponent}
         ]
     }
 ];

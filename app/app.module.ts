@@ -55,6 +55,7 @@ import {ProdutoService} from "./services/produto.service";
 import {RouterModule} from "@angular/router";
 import {PedidosFormComponent} from "./component/pedidos/pedidos-form/pedidos-form.component";
 import {PedidosListComponent} from "./component/pedidos/pedidos-list/pedidos-list.component";
+import {ProdutoListaComponent,} from "./component/produto/produto-list/produto-list.component";
 
 @NgModule({
     declarations: [
@@ -80,7 +81,8 @@ import {PedidosListComponent} from "./component/pedidos/pedidos-list/pedidos-lis
         VerificadorNomeComponent,
         ProdutoComponent,
         PedidosListComponent,
-        PedidosFormComponent
+        PedidosFormComponent,
+        ProdutoListaComponent
     ],
     imports: [
         BrowserModule,
@@ -115,6 +117,7 @@ import {PedidosListComponent} from "./component/pedidos/pedidos-list/pedidos-lis
         RouterModule.forRoot([
             { path: '', redirectTo: '/', pathMatch: 'full' },
             { path: 'produtos', component: ProdutoComponent },
+            { path: 'produtos/lista', component: PedidosListComponent}
         ])
     ]
     ,
