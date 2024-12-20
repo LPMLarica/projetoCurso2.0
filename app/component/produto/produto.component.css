@@ -1,22 +1,31 @@
 .container {
-    width: 35rem;
-    margin: auto;
-    padding: 1rem;
-    border-radius: .6rem;
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .fullWidth {
     width: 100%;
 }
 
-h1, p {
+h2 {
     text-align: center;
 }
 
-img {
-    height: 12rem;
-    margin: auto;
+
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
+
 
 .section {
     margin-bottom: 1rem;
@@ -26,6 +35,10 @@ img {
 
 button {
     margin-top: .5rem;
+}
+
+button:hover{
+    background-color: #0056b3;
 }
 
 p {

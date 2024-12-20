@@ -1,0 +1,12 @@
+<h2>Cadastro de Pedido</h2>
+<form (ngSubmit)="save()">
+    <div>
+        <label for="descricao">Descrição:</label>
+        <input id="descricao" [(ngModel)]="pedido.descricao" name="descricao" required>
+    </div>
+    <div>
+        <label for="valor">Valor:</label>
+        <input id="valor" type="number" [(ngModel)]="pedido.valor" name="valor" required>
+    </div>
+    <button type="submit">Salvar</button>
+</form>

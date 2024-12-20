@@ -16,6 +16,9 @@ import { TecnicoCreateComponent } from './component/tecnico/tecnico-create/tecni
 import { TecnicoDeleteComponent } from './component/tecnico/tecnico-delete/tecnico-delete.component';
 import { TecnicoListComponent } from './component/tecnico/tecnico-list/tecnico-list.component';
 import { TecnicoUpdateComponent } from './component/tecnico/tecnico-update/tecnico-update.component';
+import {PedidosListComponent} from "./component/pedidos/pedidos-list/pedidos-list.component";
+import {PedidosFormComponent} from "./component/pedidos/pedidos-form/pedidos-form.component";
+import {ProdutoComponent} from "./component/produto/produto.component";
 
 const routes: Routes = [
     { path: 'login', component: LoginComponent },
@@ -37,6 +40,12 @@ const routes: Routes = [
             { path: 'chamados/create',                component:   ChamadoCreateComponent },
             { path: 'chamados/update/:id',            component:   ChamadoUpdateComponent },
             { path: 'chamados/read/:id',              component:     ChamadoReadComponent },
+
+            { path: 'pedidos', component: PedidosListComponent},
+            {path: 'pedidos/novo', component: PedidosFormComponent},
+            { path: ``, redirectTo: '/pedidos', pathMatch: 'full'},
+
+            {path: 'produto', component: ProdutoComponent}
         ]
     }
 ];

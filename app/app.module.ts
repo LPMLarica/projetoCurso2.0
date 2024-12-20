@@ -53,6 +53,8 @@ import {VerificadorNomeComponent} from "./component/verificador-nome/verificador
 import {ProdutoComponent} from "./component/produto/produto.component";
 import {ProdutoService} from "./services/produto.service";
 import {RouterModule} from "@angular/router";
+import {PedidosFormComponent} from "./component/pedidos/pedidos-form/pedidos-form.component";
+import {PedidosListComponent} from "./component/pedidos/pedidos-list/pedidos-list.component";
 
 @NgModule({
     declarations: [
@@ -77,6 +79,8 @@ import {RouterModule} from "@angular/router";
         EmailComponent,
         VerificadorNomeComponent,
         ProdutoComponent,
+        PedidosListComponent,
+        PedidosFormComponent
     ],
     imports: [
         BrowserModule,

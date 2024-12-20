@@ -4,6 +4,7 @@ export class Produto {
   preco: number;
   quantidade: number;
   descricao: string;
+  estoque: number;
 
   constructor(id?: number, nome?: string, preco?: number, quantidade?: number, descricao?: string) {
     this.id = id || 0;

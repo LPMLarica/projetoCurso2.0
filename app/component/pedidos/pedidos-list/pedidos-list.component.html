@@ -1,0 +1,19 @@
+<h2>Lista de Pedidos</h2>
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Descrição</th>
+        <th>Valor</th>
+        <th>Data de Criação</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let pedidos of pedidos">
+        <td>{{ pedidos.id }}</td>
+        <td>{{ pedidos.descricao }}</td>
+        <td>{{ pedidos.valor | currency:'BRL' }}</td>
+        <td>{{ pedidos.dataCriacao | date:'short' }}</td>
+    </tr>
+    </tbody>
+</table>
