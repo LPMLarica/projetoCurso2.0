@@ -17,9 +17,8 @@ public class ProdutoResource {
     private ProdutoService produtoService;
 
     @GetMapping
-    public ResponseEntity<List<Produto>> findAll() {
-        List<Produto> produtos = produtoService.findAll();
-        return ResponseEntity.ok(produtos);
+    public List<Produto> getAll() {
+        return produtoService.findAll();
     }
 
     @GetMapping("/{id}")
@@ -29,9 +28,8 @@ public class ProdutoResource {
     }
 
     @PostMapping
-    public ResponseEntity<Produto> create(@RequestBody Produto produto) {
-        Produto novoProduto = produtoService.save(produto);
-        return ResponseEntity.ok(novoProduto);
+    public Produto create(@RequestBody Produto produto) {
+        return produtoService.save(produto);
     }
 
     @PutMapping("/{id}")
